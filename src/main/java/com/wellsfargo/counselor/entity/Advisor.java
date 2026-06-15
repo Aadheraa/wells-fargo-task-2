@@ -14,66 +14,42 @@ public class Advisor {
     private long advisorId;
 
     @Column(nullable = false)
-    private String firstName;
-
-    @Column(nullable = false)
-    private String lastName;
-
-    @Column(nullable = false)
-    private String address;
-
-    @Column(nullable = false)
-    private String phone;
+    private String name;
 
     @Column(nullable = false)
     private String email;
+
+    @Column(nullable = false)
+    private String businessHours;
 
     protected Advisor() {
 
     }
 
-    public Advisor(String firstName, String lastName, String address, String phone, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
-        this.phone = phone;
+    public Advisor(String name, String email, String businessHours) {
+        this.name = name;
         this.email = email;
+        this.businessHours = businessHours;
     }
 
     public Long getAdvisorId() {
         return advisorId;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getBusinessHours() {
+        return businessHours;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setBusinessHours(String businessHours) {
+        this.businessHours = businessHours;
     }
 
     public String getEmail() {
